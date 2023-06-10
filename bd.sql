@@ -2,13 +2,12 @@
 CREATE TABLE aplicaciones (
     aplicacion_id SERIAL PRIMARY KEY,
     aplicacion_nombre VARCHAR(70) NOT NULL,
-    aplicacion_descripcion VARCHAR (255) NOT NULL,
     aplicacion_fecha_inicio DATETIME YEAR TO MINUTE NOT NULL,
     aplicacion_situacion char (1) DEFAULT '1'
 );
 
 ---------tabla tareas
-CREATE TABLE Tareas (
+CREATE TABLE tareas (
     tarea_id SERIAL PRIMARY KEY,
     tarea_id_aplicacion INTEGER NOT NULL,
     tarea_descripcion TEXT NOT NULL,

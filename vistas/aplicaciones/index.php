@@ -12,12 +12,6 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="aplicacion_descripcion">descripcion de la aplicacion</label>
-                        <input type="text" name="aplicacion_descripcion" id="aplicacion_descripcion" class="form-control">
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col">
                         <label for="aplicacion_fecha_inicio">fecha de inicio de la aplicacion</label>
                         <input type="text" name="aplicacion_fecha_inicio" id="aplicacion_fecha_inicio" class="form-control">
                     </div>
