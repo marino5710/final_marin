@@ -1,0 +1,12 @@
+<?php include_once '../../includes/header.php'?>
+<?php include_once '../../includes/navbar.php'?>
+    <div class="container">
+        <h1 class="text-center">Buscar programadores</h1>
+        <div class="row justify-content-center">
+            <form action="/final_marin/controladores/programadores/buscar.php" method="GET" class="col-lg-8 border bg-light p-3">
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="programador_nombre">Nombre del Programador</label>
+                        <input type="text" name="programador_nombre" id="programador_nombre" class="form-control" required>
+                    </div>
+                </div>
