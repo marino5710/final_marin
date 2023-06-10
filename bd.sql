@@ -1,4 +1,4 @@
-
+------tabla aplicaciones
 CREATE TABLE aplicaciones (
     aplicacion_id SERIAL PRIMARY KEY,
     apliacion_nombre VARCHAR(70) NOT NULL,
@@ -7,7 +7,7 @@ CREATE TABLE aplicaciones (
     aplicacion_situacion char (1) DEFAULT '1'
 );
 
-
+---------tabla tareas
 CREATE TABLE tareas (
     tarea_id SERIAL PRIMARY KEY,
     tarea_id_aplicacion INTEGER NOT NULL,
@@ -17,6 +17,7 @@ CREATE TABLE tareas (
     FOREIGN KEY (id_aplicacion) REFERENCES aplicaciones(id)
 );
 
+------------tabla programadores
 CREATE TABLE programadores (
     programador_id SERIAL PRIMARY KEY,
     programador_nombre VARCHAR(70) NOT NULL,
@@ -25,8 +26,8 @@ CREATE TABLE programadores (
 
 );
 
-
-CREATE TABLE asignacion_Programadores (
+-----------tabla asignacion
+CREATE TABLE asignacion_programadores (
     asignacion_id SERIAL PRIMARY KEY,
     asignacion_id_aplicacion INTEGER NOT NULL,
     asignacion_id_programador INTEGER NOT NULL,
