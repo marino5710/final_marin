@@ -10,3 +10,18 @@
                         <input type="text" name="programador_nombre" id="programador_nombre" class="form-control" required>
                     </div>
                 </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="programador_apellido">Apellido del programador/label>
+                        <input type="text" name="programador_apellido" id="programador_apellido" class="form-control">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <button type="submit" class="btn btn-info w-100">Buscar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <?php include_once '../../includes/footer.php'?>
