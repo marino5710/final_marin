@@ -48,11 +48,11 @@ try {
                         <?php foreach($programadores as $key => $programador) : ?>
                         <tr>
                             <td><?= $key + 1 ?></td>
-                            <td><?= $programador['programador_nombre'] ?></td>
-                            <td><?= $programador['programador_apellido'] ?></td>
-                            <td><?= $programador['programador_situacion'] ?></td>
-                            <td><a class="btn btn-warning w-100" href="/final_marin/vistas/programadores/modificar.php?programador_id=<?= $programador['programador_id']?>">Modificar</a></td>
-                            <td><a class="btn btn-danger w-100" href="/final_marin/controladores/programadores/eliminar.php?programador_id=<?= $programador['programador_id']?>">Eliminar</a></td>
+                            <td><?= $programador['PROGRAMADOR_NOMBRE'] ?></td>
+                            <td><?= $programador['PROGRAMADOR_APELLIDO'] ?></td>
+                            <td><?= $programador['PROGRAMADOR_SITUACION'] ?></td>
+                            <td><a class="btn btn-warning w-100" href="/final_marin/vistas/programadores/modificar.php?programador_id=<?= $programador['PROGRAMADOR_ID']?>">Modificar</a></td>
+                            <td><a class="btn btn-danger w-100" href="/final_marin/controladores/programadores/eliminar.php?programador_id=<?= $programador['PROGRAMADOR_ID']?>">Eliminar</a></td>
                         </tr>
                         <?php endforeach ?>
                         <?php else :?>

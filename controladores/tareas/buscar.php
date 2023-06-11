@@ -42,9 +42,9 @@ try {
                         <?php foreach($tareas as $key => $tarea) : ?>
                         <tr>
                             <td><?= $key + 1 ?></td>
-                            <td><?= $tarea['tarea_descripcion'] ?></td>
-                            <td><?= $tarea['tarea_estado'] ?></td>
-                            <td><?= date('d/m/Y', strtotime($tarea['tarea_fecha'])) ?></td>
+                            <td><?= $tarea['TAREA_DESCRIPCION'] ?></td>
+                            <td><?= $tarea['TAREA_ESTADO'] ?></td>
+                            <td><?= date('d/m/Y', strtotime($tarea['TAREA_FECHA'])) ?></td>
                         </tr>
                         <?php endforeach ?>
                         <?php else :?>

@@ -19,29 +19,30 @@ class Aplicacion extends Conexion{
     }
 
     public function guardar(){
-        $sql = "INSERT INTO aplicaciones (aplicacion_nombre, aplicacion_fecha_inicio, aplicacion_situacion) VALUES ('$this->aplicacion_nombre', '$this->aplicacion_fecha_inicio', '$this->aplicacion_situacion')";
+        $sql = "INSERT INTO aplicaciones (aplicacion_nombre, aplicacion_fecha_inicio) VALUES ('$this->aplicacion_nombre', '$this->aplicacion_fecha_inicio')";
         $resultado = self::ejecutar($sql);
         return $resultado;
     }
-
     public function buscar(){
         $sql = "SELECT * FROM aplicaciones WHERE aplicacion_situacion = 1";
-
+    
         if($this->aplicacion_nombre != ''){
             $sql .= " AND aplicacion_nombre LIKE '%$this->aplicacion_nombre%'";
         }
-
+    
         if($this->aplicacion_fecha_inicio != ''){
             $sql .= " AND aplicacion_fecha_inicio = '$this->aplicacion_fecha_inicio'";
         }
-
+    
         if($this->aplicacion_id != null){
             $sql .= " AND aplicacion_id = $this->aplicacion_id";
         }
-
+    
         $resultado = self::servir($sql);
         return $resultado;
     }
+    
+    
 
     public function modificar(){
         $sql = "UPDATE aplicaciones SET aplicacion_nombre = '$this->aplicacion_nombre', aplicacion_fecha_inicio = '$this->aplicacion_fecha_inicio' WHERE aplicacion_id = $this->aplicacion_id";

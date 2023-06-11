@@ -19,7 +19,7 @@ class Programador extends Conexion{
     }
 
     public function guardar(){
-        $sql = "INSERT INTO programadores (programador_nombre, programador_apellido, programador_situacion) VALUES ('$this->programador_nombre', '$this->programador_apellido', '$this->programador_situacion')";
+        $sql = "INSERT INTO programadores (programador_nombre, programador_apellido) VALUES ('$this->programador_nombre', '$this->programador_apellido')";
         $resultado = self::ejecutar($sql);
         return $resultado;
     }
@@ -39,7 +39,7 @@ class Programador extends Conexion{
             $sql .= " AND programador_id = $this->programador_id";
         }
 
-        $resultado = self::servir($sql);
+        $resultado = self::ejecutar($sql);
         return $resultado;
     }
 

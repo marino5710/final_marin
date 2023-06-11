@@ -23,7 +23,7 @@ class Tarea extends Conexion{
     }
 
     public function guardar(){
-        $sql = "INSERT INTO tareas (tarea_id_aplicacion, tarea_descripcion, tarea_estado, tarea_fecha, tarea_situacion) VALUES ('$this->tarea_id_aplicacion', '$this->tarea_descripcion', '$this->tarea_estado', '$this->tarea_fecha', '$this->tarea_situacion')";
+        $sql = "INSERT INTO tareas (tarea_id_aplicacion, tarea_descripcion, tarea_estado, tarea_fecha) VALUES ('$this->tarea_id_aplicacion', '$this->tarea_descripcion', '$this->tarea_estado', '$this->tarea_fecha', )";
         $resultado = self::ejecutar($sql);
         return $resultado;
     }
