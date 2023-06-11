@@ -21,23 +21,26 @@ class AsignacionProgramadores extends Conexion{
         $resultado = self::ejecutar($sql);
         return $resultado;
     }
-
     public function buscar()
     {
-        $sql = "SELECT p.programador_id, p.programador_nombre, p.programador_apellido, p.programador_grado, a.aplicacion_id, a.aplicacion_nombre
-        FROM programadores p
-        JOIN asignacion_programadores ap ON p.programador_id = ap.asignacion_id_programador
-        JOIN aplicaciones a ON ap.asignacion_id_aplicacion = a.aplicacion_id
-        WHERE p.programador_situacion = '1' AND a.aplicacion_situacion = '1';
-        ";
-        
+        $sql = "SELECT
+            a.aplicacion_nombre,
+            p.programador_grado,
+            p.programador_nombre,
+            ap.asignacion_id,
+            ap.asignacion_id_aplicacion,
+            ap.asignacion_id_programador
+        FROM
+            aplicaciones a
+            JOIN asignacion_programadores ap ON a.aplicacion_id = ap.asignacion_id_aplicacion
+            JOIN programadores p ON p.programador_id = ap.asignacion_id_programador";
     
-        if ($this->asignacion_id_aplicacion != null) {
+        if ($this->asignacion_id_aplicacion !== null) {
             $sql .= " WHERE asignacion_id_aplicacion = $this->asignacion_id_aplicacion";
         }
     
-        if ($this->asignacion_id_programador != null) {
-            if ($this->asignacion_id_aplicacion != null) {
+        if ($this->asignacion_id_programador !== null) {
+            if ($this->asignacion_id_aplicacion !== null) {
                 $sql .= " AND asignacion_id_programador = $this->asignacion_id_programador";
             } else {
                 $sql .= " WHERE asignacion_id_programador = $this->asignacion_id_programador";
@@ -45,8 +48,14 @@ class AsignacionProgramadores extends Conexion{
         }
     
         $resultado = self::servir($sql);
-        return $resultado;
+        
+        if (!empty($resultado)) {
+            return $resultado;
+        } else {
+            return array(); // Devuelve un arreglo vacío si no hay resultados
+        }
     }
+    
     
     public function modificar(){
         $sql = "UPDATE asignacion_programadores SET asignacion_id_aplicacion = '$this->asignacion_id_aplicacion', asignacion_id_programador = '$this->asignacion_id_programador' WHERE asignacion_id = $this->asignacion_id";

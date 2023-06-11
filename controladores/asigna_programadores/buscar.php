@@ -5,6 +5,9 @@ error_reporting(E_ALL);
 require_once '../../modelos/Asigna_Programadores.php';
 
 try {
+    $asignacion_id_aplicacion = $_GET['asignacion_id_aplicacion'];
+    $asignacion_id_programador = $_GET['asignacion_id_programador'];
+
     $asignacionProgramadores = new AsignacionProgramadores($_GET);
     $resultados = $asignacionProgramadores->buscar();
 } catch (PDOException $e) {
@@ -31,7 +34,9 @@ try {
                     <thead class="table-dark">
                         <tr>
                             <th>NO.</th>
+                            <th>ID DE ASIGNACION DE LA APLICACION</th>
                             <th>NOMBRE DE LA APLICACION</th>
+                            <th>ID DE ASIGNACION DEL PROGRAMADOR</th>
                             <th>GRADO DEL PROGRAMADOR</th>
                             <th>NOMBRE DEL PROGRAMADOR</th>
                             <th>MODIFICAR</th>
@@ -43,7 +48,9 @@ try {
                             <?php foreach ($resultados as $key => $resultado) : ?>
                                 <tr>
                                     <td><?= $key + 1 ?></td>
+                                    <td><?= $resultado['ASIGNACION_ID_APLICACION'] ?></td>
                                     <td><?= $resultado['APLICACION_NOMBRE'] ?></td>
+                                    <td><?= $resultado['ASIGNACION_ID_PROGRAMADOR'] ?></td>
                                     <td><?= $resultado['PROGRAMADOR_GRADO'] ?></td>
                                     <td><?= $resultado['PROGRAMADOR_NOMBRE'] ?></td>
                                     <td><a class="btn btn-warning w-100" href="/final_marin/vistas/asigna_programadores/modificar.php?asignacion_id=<?= $resultado['ASIGNACION_ID'] ?>">Modificar</a></td>

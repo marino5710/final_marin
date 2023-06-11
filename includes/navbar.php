@@ -41,10 +41,10 @@
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/final_marin/vistas/asigna_programadores/index.php">Ingresar programadores</a>
+                            <a class="nav-link" href="/final_marin/vistas/asigna_programadores/index.php">Asignar programadores a las APPS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/final_marin/vistas/asigna_programadores/buscar.php">Buscar programadores</a>
+                            <a class="nav-link" href="/final_marin/vistas/asigna_programadores/buscar.php">Buscar programadores asignados a las APPS</a>
                         </li>
                     </ul>
                 </li>
