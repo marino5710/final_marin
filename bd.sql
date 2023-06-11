@@ -13,7 +13,7 @@ CREATE TABLE tareas (
     tarea_descripcion TEXT NOT NULL,
     tarea_estado VARCHAR(15) CHECK (tarea_estado IN ('FINALIZADA', 'NO INICIADA')) NOT NULL,
     tarea_fecha DATETIME YEAR TO MINUTE NOT NULL,
-    tarea_situacion char (1) DEFAULT '1'
+    tarea_situacion char (1) DEFAULT '1',
     FOREIGN KEY (tarea_id_aplicacion) REFERENCES aplicaciones(aplicacion_id)
 );
 ------------tabla programadores
@@ -30,6 +30,6 @@ CREATE TABLE asignacion_programadores (
     asignacion_id SERIAL PRIMARY KEY,
     asignacion_id_aplicacion INTEGER NOT NULL,
     asignacion_id_programador INTEGER NOT NULL,
-    FOREIGN KEY (id_aplicacion) REFERENCES aplicaciones(aplicacion_id),
-    FOREIGN KEY (id_programador) REFERENCES programadores(programador_id)
+    FOREIGN KEY (asignacion_id_aplicacion) REFERENCES aplicaciones(aplicacion_id),
+    FOREIGN KEY (asignacion_id_programador) REFERENCES programadores(programador_id)
 );
