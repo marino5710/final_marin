@@ -24,6 +24,7 @@ try {
     <div class="row justify-content-center">
         <form action="/final_marin/controladores/tareas/buscar.php" method="GET" class="col-lg-8 border bg-light p-3">
             <div class="row mb-3">
+            <input type="hidden" name="tarea_id">
                 <div class="col">
                     <label for="tarea_id_aplicacion">Aplicación</label>
                     <select name="tarea_id_aplicacion" id="tarea_id_aplicacion" class="form-control">

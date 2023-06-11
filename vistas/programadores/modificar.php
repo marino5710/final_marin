@@ -23,6 +23,12 @@ require '../../modelos/programador.php';
                 <input type="hidden" name="programador_id">
                 <div class="row mb-3">
                     <div class="col">
+                        <label for="programador_grado">Grado del Programador</label>
+                        <input type="text" name="programador_grado" id="programador_grado" class="form-control">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
                         <label for="programador_nombre">Nombre del programador</label>
                         <input type="text" name="programador_nombre" id="programador_nombre" class="form-control" required>
                     </div>

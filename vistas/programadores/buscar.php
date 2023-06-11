@@ -10,6 +10,13 @@ error_reporting(E_ALL);
         <h1 class="text-center">Buscar programadores</h1>
         <div class="row justify-content-center">
             <form action="/final_marin/controladores/programadores/buscar.php" method="GET" class="col-lg-8 border bg-light p-3">
+            <input type="hidden" name="programador_id">
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="programador_grado">Grado del Programador</label>
+                        <input type="text" name="programador_grado" id="programador_grado" class="form-control">
+                    </div>
+                </div>
                 <div class="row mb-3">
                     <div class="col">
                         <label for="programador_nombre">Nombre del Programador</label>
