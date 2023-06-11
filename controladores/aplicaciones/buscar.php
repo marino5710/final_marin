@@ -48,8 +48,8 @@ try {
                             <td><?= $key + 1 ?></td>
                             <td><?= $aplicacion['APLICACION_NOMBRE'] ?></td>
                             <td><?= $aplicacion['APLICACION_FECHA_INICIO'] ?></td>
-                            <td><a class="btn btn-warning w-100" href="/crud_practica9/vistas/aplicaciones/modificar.php?aplicacion_id=<?= $aplicacion['APLICACION_ID']?>">Modificar</a></td>
-                            <td><a class="btn btn-danger w-100" href="/crud_practica9/controladores/aplicaciones/eliminar.php?aplicacion_id=<?= $aplicacion['APLICACION_ID']?>">Eliminar</a></td>
+                            <td><a class="btn btn-warning w-100" href="/final_marin/vistas/aplicaciones/modificar.php?aplicacion_id=<?= $aplicacion['APLICACION_ID']?>">Modificar</a></td>
+                            <td><a class="btn btn-danger w-100" href="/final_marin/controladores/aplicaciones/eliminar.php?aplicacion_id=<?= $aplicacion['APLICACION_ID']?>">Eliminar</a></td>
                         </tr>
                         <?php endforeach ?>
                         <?php else :?>

@@ -48,6 +48,7 @@ try {
                         <?php foreach($programadores as $key => $programador) : ?>
                         <tr>
                             <td><?= $key + 1 ?></td>
+                            <td><?= $programador['PROGRAMADOR_GRADO'] ?></td>
                             <td><?= $programador['PROGRAMADOR_NOMBRE'] ?></td>
                             <td><?= $programador['PROGRAMADOR_APELLIDO'] ?></td>
                             <td><?= $programador['PROGRAMADOR_SITUACION'] ?></td>

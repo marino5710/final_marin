@@ -19,6 +19,7 @@ CREATE TABLE tareas (
 ------------tabla programadores
 CREATE TABLE programadores (
     programador_id SERIAL PRIMARY KEY,
+    programador_grado VARCHAR(70) NOT NULL,
     programador_nombre VARCHAR(70) NOT NULL,
     programador_apellido VARCHAR(70) NOT NULL,
     programador_situacion char (1) DEFAULT '1'

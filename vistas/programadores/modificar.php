@@ -20,7 +20,7 @@ require '../../modelos/programador.php';
         <h1 class="text-center">Modificar P</h1>
         <div class="row justify-content-center">
             <form action="/final_marin/controladores/programadores/guardar.php" method="POST" class="col-lg-8 border bg-light p-3">
-                <input type="hidden" name="cliente_id">
+                <input type="hidden" name="programador_id">
                 <div class="row mb-3">
                     <div class="col">
                         <label for="programador_nombre">Nombre del programador</label>

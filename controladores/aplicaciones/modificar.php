@@ -4,10 +4,15 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 require '../../modelos/Aplicacion.php';
 
+
+
+
 if ($_POST['aplicacion_nombre'] != '' && $_POST['aplicacion_fecha_inicio'] != '' && $_POST['aplicacion_id'] != '') {
+
     try {
         $aplicacion = new Aplicacion($_POST);
         $resultado = $aplicacion->modificar();
+
     } catch (PDOException $e) {
         $error = $e->getMessage();
     } catch (Exception $e2) {
@@ -16,6 +21,9 @@ if ($_POST['aplicacion_nombre'] != '' && $_POST['aplicacion_fecha_inicio'] != ''
 } else {
     $error = "Debe llenar todos los datos";
 }
+// var_dump($_POST);
+// exit();
+
 
 ?>
 <!DOCTYPE html>

@@ -4,7 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 require '../../modelos/Programador.php';
 
-if($_POST['programador_nombre'] != '' && $_POST['programador_apellido'] != ''){
+if($_POST['programador_grado'] != '' &&$_POST['programador_nombre'] != '' && $_POST['programador_apellido'] != ''){
     try {
         $programador = new Programador($_POST);
         $resultado = $programador->guardar();
