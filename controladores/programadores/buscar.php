@@ -36,9 +36,9 @@ try {
                     <thead class="table-dark">
                         <tr>
                             <th>NO. </th>
+                            <th>GRADO </th>
                             <th>NOMBRE</th>
                             <th>APELLIDO</th>
-                            <th>SITUACIÓN</th>
                             <th>MODIFICAR</th>
                             <th>ELIMINAR</th>
                         </tr>
@@ -51,7 +51,6 @@ try {
                             <td><?= $programador['PROGRAMADOR_GRADO'] ?></td>
                             <td><?= $programador['PROGRAMADOR_NOMBRE'] ?></td>
                             <td><?= $programador['PROGRAMADOR_APELLIDO'] ?></td>
-                            <td><?= $programador['PROGRAMADOR_SITUACION'] ?></td>
                             <td><a class="btn btn-warning w-100" href="/final_marin/vistas/programadores/modificar.php?programador_id=<?= $programador['PROGRAMADOR_ID']?>">Modificar</a></td>
                             <td><a class="btn btn-danger w-100" href="/final_marin/controladores/programadores/eliminar.php?programador_id=<?= $programador['PROGRAMADOR_ID']?>">Eliminar</a></td>
                         </tr>
