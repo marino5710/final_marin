@@ -2,7 +2,7 @@
 CREATE TABLE aplicaciones (
     aplicacion_id SERIAL PRIMARY KEY,
     aplicacion_nombre VARCHAR(70) NOT NULL,
-    aplicacion_fecha_inicio DATETIME YEAR TO MINUTE NOT NULL,
+    aplicacion_fecha_inicio DATETIME YEAR TO DAY,
     aplicacion_situacion char (1) DEFAULT '1'
 );
 
@@ -12,7 +12,7 @@ CREATE TABLE tareas (
     tarea_id_aplicacion INTEGER NOT NULL,
     tarea_descripcion VARCHAR(70) NOT NULL,
     tarea_estado VARCHAR(15) CHECK (tarea_estado IN ('FINALIZADA', 'NO INICIADA')) NOT NULL,
-    tarea_fecha DATETIME YEAR TO MINUTE NOT NULL,
+    tarea_fecha DATETIME YEAR TO DAY,
     tarea_situacion char (1) DEFAULT '1',
     FOREIGN KEY (tarea_id_aplicacion) REFERENCES aplicaciones(aplicacion_id)
 );
