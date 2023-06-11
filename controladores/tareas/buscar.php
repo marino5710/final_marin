@@ -38,6 +38,8 @@ try {
                             <th>DESCRIPCIÓN</th>
                             <th>ESTADO</th>
                             <th>FECHA</th>
+                            <th>MODIFICAR</th>
+                            <th>ELIMINAR</th>
                         </tr>
                     </thead>
                     <tbody>
