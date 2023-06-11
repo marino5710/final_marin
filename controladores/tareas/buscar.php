@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 require_once '../../modelos/Tarea.php';
 
 try {
-    $_GET['tarea_fecha'] = $_GET['tarea_fecha'] != '' ? date('Y-m-d', strtotime($_GET['tarea_fecha'])) : '';
+    //$_GET['tarea_fecha'] = $_GET['tarea_fecha'] != '' ? date('Y-m-d', strtotime($_GET['tarea_fecha'])) : '';
     $tarea = new Tarea($_GET);
     $tareas = $tarea->buscar();
 } catch (PDOException $e) {
@@ -49,8 +49,8 @@ try {
                             <td><?= $tarea['TAREA_DESCRIPCION'] ?></td>
                             <td><?= $tarea['TAREA_ESTADO'] ?></td>
                             <td><?= date('d/m/Y', strtotime($tarea['TAREA_FECHA'])) ?></td>
-                            <td><a class="btn btn-warning w-100" href="/final_marin/vistas/tareas/modificar.php?tar_id=<?= $tarea['TAREA_ID']?>">Modificar</a></td>
-                            <td><a class="btn btn-danger w-100" href="/final_marin/controladores/tareas/eliminar.php?tar_id=<?= $tarea['TAREA_ID']?>">Eliminar</a></td>
+                            <td><a class="btn btn-warning w-100" href="/final_marin/vistas/tareas/modificar.php?tarea_id=<?= $tarea['TAREA_ID']?>">Modificar</a></td>
+                            <td><a class="btn btn-danger w-100" href="/final_marin/controladores/tareas/eliminar.php?tarea_id=<?= $tarea['TAREA_ID']?>">Eliminar</a></td>
                         </tr>
                         <?php endforeach ?>
                         <?php else :?>
