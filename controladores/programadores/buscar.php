@@ -11,7 +11,7 @@ try {
     // var_dump($programadores);
     // echo "</pre>";
     // exit;
-    // $error = "NO se guardó correctamente";
+    $error = "NO se guardó correctamente";
 } catch (PDOException $e) {
     $error = $e->getMessage();
 } catch (Exception $e2){
