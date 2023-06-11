@@ -1,5 +1,11 @@
 <?php include_once '../../includes/header.php'?>
-<?php include_once '../../includes/navbar.php'?>}
+<?php include_once '../../includes/navbar.php'?>
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
+
 <div class="container">
         <h1 class="text-center">Formulario de ingreso de clientes</h1>
         <div class="row justify-content-center">
