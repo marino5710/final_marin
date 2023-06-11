@@ -24,7 +24,7 @@ try {
         <form action="/final_marin/controladores/tareas/guardar.php" method="POST" class="col-lg-8 border bg-light p-3">
             <div class="row mb-3">
                 <div class="col">
-                    <label for="tarea_id_aplicacion">Aplicación</label>
+                    <label for="tarea">Aplicación</label>
                     <select name="tarea_id_aplicacion" id="tarea_id_aplicacion" class="form-control">
                         <option value="">SELECCIONE...</option>
                         <?php foreach ($aplicaciones as $key => $aplicacion) : ?>
