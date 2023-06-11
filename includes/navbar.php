@@ -20,9 +20,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/final_marin/vistas/aplicaciones/buscar.php">Buscar aplicacion</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/final_marin/controladores/aplicaciones/detalle_ventas.php">Detalle de venta</a>
-                        </li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -35,6 +32,19 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/final_marin/vistas/programadores/buscar.php">Buscar programadores</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Asignacion de Programadores a APPS
+                    </a>
+                    <ul class="dropdown-menu bg-dark">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/final_marin/vistas/asigna_programadores/index.php">Ingresar programadores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/final_marin/vistas/asigna_programadores/buscar.php">Buscar programadores</a>
                         </li>
                     </ul>
                 </li>
