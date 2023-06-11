@@ -23,38 +23,37 @@ class AsignacionProgramadores extends Conexion{
     }
     public function buscar()
     {
-        $sql = "SELECT
-            a.aplicacion_nombre,
-            p.programador_grado,
-            p.programador_nombre,
-            ap.asignacion_id,
-            ap.asignacion_id_aplicacion,
-            ap.asignacion_id_programador
-        FROM
-            aplicaciones a
-            JOIN asignacion_programadores ap ON a.aplicacion_id = ap.asignacion_id_aplicacion
-            JOIN programadores p ON p.programador_id = ap.asignacion_id_programador";
+        $sql = "SELECT a.aplicacion_nombre, p.programador_grado, p.programador_nombre, ap.asignacion_id
+        FROM aplicaciones a
+        JOIN asignacion_programadores ap ON a.aplicacion_id = ap.asignacion_id_aplicacion
+        JOIN programadores p ON ap.asignacion_id_programador = p.programador_id
+        WHERE 1=1";
+
     
-        if ($this->asignacion_id_aplicacion !== null) {
-            $sql .= " WHERE asignacion_id_aplicacion = $this->asignacion_id_aplicacion";
-        }
-    
-        if ($this->asignacion_id_programador !== null) {
-            if ($this->asignacion_id_aplicacion !== null) {
-                $sql .= " AND asignacion_id_programador = $this->asignacion_id_programador";
-            } else {
-                $sql .= " WHERE asignacion_id_programador = $this->asignacion_id_programador";
+            if (!empty($nombreAplicacion)) {
+                $sql .= " AND a.aplicacion_nombre LIKE '%$nombreAplicacion%'";
             }
-        }
+
+            if (!empty($gradoProgramador)) {
+                $sql .= " AND p.programador_grado = '$gradoProgramador'";
+            }
+
+            if (!empty($nombreProgramador)) {
+                $sql .= " AND p.programador_nombre LIKE '%$nombreProgramador%'";
+            }
+
+            if (!empty($asignacionId)) {
+                $sql .= " AND ap.asignacion_id = $asignacionId";
+            }
+
+
     
         $resultado = self::servir($sql);
-        
-        if (!empty($resultado)) {
-            return $resultado;
-        } else {
-            return array(); // Devuelve un arreglo vacío si no hay resultados
-        }
+    
+        return $resultado;
     }
+    
+    
     
     
     public function modificar(){
