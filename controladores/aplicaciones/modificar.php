@@ -53,7 +53,7 @@ if ($_POST['aplicacion_nombre'] != '' && $_POST['aplicacion_fecha_inicio'] != ''
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/final_marin/controladores/aplicaciones/buscar.php class="btn btn-info">Volver al formulario</a>
+                <a href="/final_marin/controladores/aplicaciones/buscar.php?aplicacion_nombre=<?= $_POST['aplicacion_nombre'] ?>" class="btn btn-info">Volver al formulario</a>
             </div>
         </div>
     </div>
