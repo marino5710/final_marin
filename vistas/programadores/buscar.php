@@ -19,12 +19,12 @@ error_reporting(E_ALL);
                 <div class="row mb-3">
                     <div class="col">
                         <label for="programador_nombre">Nombre del Programador</label>
-                        <input type="text" name="programador_nombre" id="programador_nombre" class="form-control" required>
+                        <input type="text" name="programador_nombre" id="programador_nombre" class="form-control">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="programador_apellido">Apellido del programador/label>
+                        <label for="programador_apellido">Apellido del programador</label>
                         <input type="text" name="programador_apellido" id="programador_apellido" class="form-control">
                     </div>
                 </div>
