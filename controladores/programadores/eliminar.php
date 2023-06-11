@@ -37,7 +37,7 @@ try {
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/crud_practica9/controladores/programadores/buscar.php" class="btn btn-info">Volver al formulario</a>
+                <a href="/final_marin/controladores/programadores/buscar.php" class="btn btn-info">Volver al formulario</a>
             </div>
         </div>
     </div>

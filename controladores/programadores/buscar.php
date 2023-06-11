@@ -48,8 +48,8 @@ try {
                             <td><?= $programador['programador_nombre'] ?></td>
                             <td><?= $programador['programador_apellido'] ?></td>
                             <td><?= $programador['programador_situacion'] ?></td>
-                            <td><a class="btn btn-warning w-100" href="/crud_practica9/vistas/programadores/modificar.php?programador_id=<?= $programador['programador_id']?>">Modificar</a></td>
-                            <td><a class="btn btn-danger w-100" href="/crud_practica9/controladores/programadores/eliminar.php?programador_id=<?= $programador['programador_id']?>">Eliminar</a></td>
+                            <td><a class="btn btn-warning w-100" href="/final_marin/vistas/programadores/modificar.php?programador_id=<?= $programador['programador_id']?>">Modificar</a></td>
+                            <td><a class="btn btn-danger w-100" href="/final_marin/controladores/programadores/eliminar.php?programador_id=<?= $programador['programador_id']?>">Eliminar</a></td>
                         </tr>
                         <?php endforeach ?>
                         <?php else :?>
