@@ -46,7 +46,7 @@ if ($_POST['asignacion_id_aplicacion'] != '' && $_POST['asignacion_id_programado
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/final_marin/vistas/asignacion_programadores/index.php" class="btn btn-info">Volver al formulario</a>
+                <a href="/final_marin/vistas/asigna_programadores/index.php" class="btn btn-info">Volver al formulario</a>
             </div>
         </div>
     </div>

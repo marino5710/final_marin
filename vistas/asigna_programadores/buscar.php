@@ -19,7 +19,7 @@ try {
 <div class="container">
     <h1 class="text-center">Formulario de búsqueda de asignación de programadores</h1>
     <div class="row justify-content-center">
-        <form action="/final_marin/controladores/asignacion_programadores/buscar.php" method="GET" class="col-lg-8 border bg-light p-3">
+        <form action="/final_marin/controladores/asigna_programadores/buscar.php" method="GET" class="col-lg-8 border bg-light p-3">
             <div class="row mb-3">
                 <div class="col">
                     <label for="asignacion_id_aplicacion">Aplicación</label>
