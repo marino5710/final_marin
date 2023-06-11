@@ -4,7 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 require_once '../../modelos/Aplicacion.php';
     try {
-        $aplicacion = new Aplicacion();
+        $aplicacion = new Aplicacion($_GET);
         $aplicaciones = $aplicacion->buscar();
             // var_dump($clientes);
             // exit;

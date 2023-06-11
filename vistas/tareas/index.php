@@ -3,11 +3,11 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require_once '../../modelos/Tarea.php';
+
 require_once '../../modelos/Aplicacion.php';
 
 try {
-    $aplicacion = new Aplicacion();
+    $aplicacion = new Aplicacion($_GET);
     $aplicaciones = $aplicacion->buscar();
 } catch (PDOException $e) {
     $error = $e->getMessage();
@@ -28,7 +28,7 @@ try {
                     <select name="tarea_id_aplicacion" id="tarea_id_aplicacion" class="form-control">
                         <option value="">SELECCIONE...</option>
                         <?php foreach ($aplicaciones as $key => $aplicacion) : ?>
-                            <option value="<?= $aplicacion['aplicacion_id'] ?>"><?= $aplicacion['aplicacion_nombre'] ?></option>
+                            <option value="<?= $aplicacion['APLICACION_ID'] ?>"><?= $aplicacion['APLICACION_NOMBRE'] ?></option>
                         <?php endforeach?>
                     </select>
                 </div>
@@ -51,7 +51,7 @@ try {
             <div class="row mb-3">
                 <div class="col">
                     <label for="tarea_fecha">Fecha de la realización de la tarea</label>
-                    <input type="datetime-local" value="<?= date('Y-m-d\TH:i') ?>" name="tarea_fecha" id="tarea_fecha" class="form-control">
+                    <input type="datetime" value="<?= date('Y-m-d') ?>" name="tarea_fecha" id="tarea_fecha" class="form-control">
                 </div>
             </div>
             <div class="row mb-3">

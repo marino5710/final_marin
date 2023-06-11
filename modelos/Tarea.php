@@ -14,7 +14,7 @@ class Tarea extends Conexion{
 
     public function __construct($args = [])
     {
-        $this->tarea_id = $args['tarea_id'] ?? null;
+        $this->tarea_id = $args['TAREA_ID'] ?? null;
         $this->tarea_id_aplicacion = $args['tarea_id_aplicacion'] ?? null;
         $this->tarea_descripcion = $args['tarea_descripcion'] ?? '';
         $this->tarea_estado = $args['tarea_estado'] ?? '';
@@ -23,7 +23,7 @@ class Tarea extends Conexion{
     }
 
     public function guardar(){
-        $sql = "INSERT INTO tareas (tarea_id_aplicacion, tarea_descripcion, tarea_estado, tarea_fecha) VALUES ('$this->tarea_id_aplicacion', '$this->tarea_descripcion', '$this->tarea_estado', '$this->tarea_fecha', )";
+        $sql = "INSERT INTO tareas (tarea_id_aplicacion, tarea_descripcion, tarea_estado, tarea_fecha) VALUES ('$this->tarea_id_aplicacion', '$this->tarea_descripcion', '$this->tarea_estado', '$this->tarea_fecha' )";
         $resultado = self::ejecutar($sql);
         return $resultado;
     }
