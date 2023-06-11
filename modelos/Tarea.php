@@ -57,7 +57,7 @@ class Tarea extends Conexion{
     }
 
     public function eliminar(){
-        echo "Valor de tarea_id: " . $this->tarea_id;
+       // echo "Valor de tarea_id: " . $this->tarea_id;
         
         $sql = "UPDATE tareas SET tarea_situacion = '0' WHERE tarea_id = $this->tarea_id";
         
