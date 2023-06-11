@@ -14,7 +14,7 @@ class Tarea extends Conexion{
 
     public function __construct($args = [])
     {
-        $this->tarea_id = $args['TAREA_ID'] ?? null;
+        $this->tarea_id = $args['tarea_id'] ?? null;
         $this->tarea_id_aplicacion = $args['tarea_id_aplicacion'] ?? null;
         $this->tarea_descripcion = $args['tarea_descripcion'] ?? '';
         $this->tarea_estado = $args['tarea_estado'] ?? '';
@@ -28,20 +28,26 @@ class Tarea extends Conexion{
         return $resultado;
     }
 
-    public function buscar(){
-        $sql = "SELECT * FROM tareas WHERE tarea_situacion = '1'";
-
-        if($this->tarea_id_aplicacion != null){
-            $sql .= " AND tarea_id_aplicacion = $this->tarea_id_aplicacion";
+    public function buscar()
+    {
+        $sql = "SELECT t.*, a.aplicacion_nombre 
+                FROM tareas t
+                JOIN aplicaciones a ON t.tarea_id_aplicacion = a.aplicacion_id
+                WHERE t.tarea_situacion = '1'";
+    
+        if ($this->tarea_id_aplicacion != null) {
+            $sql .= " AND t.tarea_id_aplicacion = $this->tarea_id_aplicacion";
         }
-
-        if($this->tarea_estado != ''){
-            $sql .= " AND tarea_estado = '$this->tarea_estado'";
+    
+        if ($this->tarea_estado != '') {
+            $sql .= " AND t.tarea_estado = '$this->tarea_estado'";
         }
-
+    
         $resultado = self::servir($sql);
         return $resultado;
     }
+    
+    
 
     public function modificar(){
         $sql = "UPDATE tareas SET tarea_id_aplicacion = '$this->tarea_id_aplicacion', tarea_descripcion = '$this->tarea_descripcion', tarea_estado = '$this->tarea_estado', tarea_fecha = '$this->tarea_fecha' WHERE tarea_id = $this->tarea_id";

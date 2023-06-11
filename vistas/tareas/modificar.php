@@ -40,7 +40,7 @@ try {
                 <div class="row mb-3">
                     <div class="col">
                         <label for="tarea_fecha">Fecha de la tarea</label>
-                        <input type="datetime-local" name="tarea_fecha" id="tarea_fecha" class="form-control" required>
+                        <input type="date" value="<?= date('Y-m-d') ?>" name="tarea_fecha" id="tarea_fecha" class="form-control" required>
                     </div>
                 </div>
                 <div class="row mb-3">

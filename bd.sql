@@ -10,7 +10,7 @@ CREATE TABLE aplicaciones (
 CREATE TABLE tareas (
     tarea_id SERIAL PRIMARY KEY,
     tarea_id_aplicacion INTEGER NOT NULL,
-    tarea_descripcion TEXT NOT NULL,
+    tarea_descripcion VARCHAR(70) NOT NULL,
     tarea_estado VARCHAR(15) CHECK (tarea_estado IN ('FINALIZADA', 'NO INICIADA')) NOT NULL,
     tarea_fecha DATETIME YEAR TO MINUTE NOT NULL,
     tarea_situacion char (1) DEFAULT '1',

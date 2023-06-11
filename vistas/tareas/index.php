@@ -51,7 +51,7 @@ try {
             <div class="row mb-3">
                 <div class="col">
                     <label for="tarea_fecha">Fecha de la realización de la tarea</label>
-                    <input type="datetime" value="<?= date('Y-m-d') ?>" name="tarea_fecha" id="tarea_fecha" class="form-control">
+                    <input type="date" value="<?= date('Y-m-d') ?>" name="tarea_fecha" id="tarea_fecha" class="form-control">
                 </div>
             </div>
             <div class="row mb-3">

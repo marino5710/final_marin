@@ -13,6 +13,8 @@ try {
 } catch (Exception $e2) {
     $error = $e2->getMessage();
 }
+// var_dump($tareas);
+// exit;
 
 ?>
 <!DOCTYPE html>
@@ -32,6 +34,7 @@ try {
                     <thead class="table-dark">
                         <tr>
                             <th>NO.</th>
+                            <th>APLICACION</th>
                             <th>DESCRIPCIÓN</th>
                             <th>ESTADO</th>
                             <th>FECHA</th>
@@ -42,9 +45,12 @@ try {
                         <?php foreach($tareas as $key => $tarea) : ?>
                         <tr>
                             <td><?= $key + 1 ?></td>
+                            <td><?= $tarea['APLICACION_NOMBRE'] ?></td>
                             <td><?= $tarea['TAREA_DESCRIPCION'] ?></td>
                             <td><?= $tarea['TAREA_ESTADO'] ?></td>
                             <td><?= date('d/m/Y', strtotime($tarea['TAREA_FECHA'])) ?></td>
+                            <td><a class="btn btn-warning w-100" href="/final_marin/vistas/tareas/modificar.php?tar_id=<?= $tarea['TAREA_ID']?>">Modificar</a></td>
+                            <td><a class="btn btn-danger w-100" href="/final_marin/controladores/tareas/eliminar.php?tar_id=<?= $tarea['TAREA_ID']?>">Eliminar</a></td>
                         </tr>
                         <?php endforeach ?>
                         <?php else :?>
