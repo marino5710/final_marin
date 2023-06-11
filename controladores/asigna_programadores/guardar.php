@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-require_once '../../modelos/AsignacionProgramadores.php';
+require_once '../../modelos/Asigna_Programadores.php';
 
 if ($_POST['asignacion_id_aplicacion'] != '' && $_POST['asignacion_id_programador'] != '') {
     try {

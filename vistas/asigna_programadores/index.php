@@ -31,7 +31,7 @@ try {
                     <select name="asignacion_id_aplicacion" id="asignacion_id_aplicacion" class="form-control">
                         <option value="">SELECCIONE...</option>
                         <?php foreach ($aplicaciones as $key => $aplicacion) : ?>
-                            <option value="<?= $aplicacion['aplicacion_id'] ?>"><?= $aplicacion['aplicacion_nombre'] ?></option>
+                            <option value="<?= $aplicacion['APLICACION_ID'] ?>"><?= $aplicacion['APLICACION_NOMBRE'] ?></option>
                         <?php endforeach ?>
                     </select>
                 </div>
@@ -42,7 +42,7 @@ try {
                     <select name="asignacion_id_programador" id="asignacion_id_programador" class="form-control">
                         <option value="">SELECCIONE...</option>
                         <?php foreach ($programadores as $key => $programador) : ?>
-                            <option value="<?= $programador['programador_id'] ?>"><?= $programador['programador_nombre'] ?></option>
+                            <option value="<?= $programador['PROGRAMADOR_ID'] ?>"><?= $programador['PROGRAMADOR_NOMBRE'] ?></option>
                         <?php endforeach ?>
                     </select>
                 </div>

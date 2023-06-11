@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-require_once '../../modelos/AsignacionProgramadores.php';
+require_once '../../modelos/Asigna_Programadores.php';
 
 try {
     $asignacionProgramadores = new AsignacionProgramadores($_GET);
@@ -42,10 +42,10 @@ try {
                             <?php foreach ($resultados as $key => $resultado) : ?>
                                 <tr>
                                     <td><?= $key + 1 ?></td>
-                                    <td><?= $resultado['asignacion_id_aplicacion'] ?></td>
-                                    <td><?= $resultado['asignacion_id_programador'] ?></td>
-                                    <td><a class="btn btn-warning w-100" href="/final_marin/vistas/asignacion_programadores/modificar.php?asignacion_id=<?= $resultado['asignacion_id'] ?>">Modificar</a></td>
-                                    <td><a class="btn btn-danger w-100" href="/final_marin/controladores/asignacion_programadores/eliminar.php?asignacion_id=<?= $resultado['asignacion_id'] ?>">Eliminar</a></td>
+                                    <td><?= $resultado['ASIGNACION_ID_APLICACION'] ?></td>
+                                    <td><?= $resultado['ASIGNACION_ID_PROGRAMADOR'] ?></td>
+                                    <td><a class="btn btn-warning w-100" href="/final_marin/vistas/asigna_programadores/modificar.php?asignacion_id=<?= $resultado['ASIGNACION_ID'] ?>">Modificar</a></td>
+                                    <td><a class="btn btn-danger w-100" href="/final_marin/controladores/asigna_programadores/eliminar.php?asignacion_id=<?= $resultado['ASIGNACION_ID'] ?>">Eliminar</a></td>
                                 </tr>
                             <?php endforeach ?>
                         <?php else : ?>
@@ -59,7 +59,7 @@ try {
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-4">
-                <a href="/final_marin/vistas/asignacion_programadores/buscar.php" class="btn btn-info w-100">Volver al formulario</a>
+                <a href="/final_marin/vistas/asigna_programadores/buscar.php" class="btn btn-info w-100">Volver al formulario</a>
             </div>
         </div>
     </div>
