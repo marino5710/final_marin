@@ -23,7 +23,7 @@ class AsignacionProgramadores extends Conexion{
     }
     public function buscar()
     {
-        $sql = "SELECT a.aplicacion_nombre, p.programador_grado, p.programador_nombre, ap.asignacion_id
+        $sql = "SELECT a.aplicacion_nombre, p.programador_grado, p.programador_nombre, p.programador_apellido, ap.asignacion_id
         FROM aplicaciones a
         JOIN asignacion_programadores ap ON a.aplicacion_id = ap.asignacion_id_aplicacion
         JOIN programadores p ON ap.asignacion_id_programador = p.programador_id

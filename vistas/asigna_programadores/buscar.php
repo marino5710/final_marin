@@ -7,6 +7,7 @@ try {
     $programador = new Programador();
     $aplicaciones = $aplicacion->buscar();
     $programadores = $programador->buscar();
+    //var_dump($programadores);
 } catch (PDOException $e) {
     $error = $e->getMessage();
 } catch (Exception $e2) {

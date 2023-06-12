@@ -8,6 +8,7 @@ require_once '../../modelos/Progreso_Aplicacion.php';
 $aplicacion_id = $_GET['aplicacion_id'] ?? '';
 $programador_grado = $_GET['programador_grado'] ?? '';
 $programador_nombre = $_GET['programador_nombre'] ?? '';
+$programador_apellido = $_GET['programador_apellido'] ?? '';
 $asignacion_id = $_GET['asignacion_id'] ?? '';
 
 try {
@@ -59,7 +60,7 @@ if ($totalTareas > 0) {
                 </tr>
                 <tr>
                     <th colspan="2">Programador Asignado</th>
-                    <td colspan="2"><?= $resultados[0]['PROGRAMADOR_GRADO'] ?? '' ?> <?= $resultados[0]['PROGRAMADOR_NOMBRE'] ?? '' ?></td>
+                    <td colspan="2"><?= $resultados[0]['PROGRAMADOR_GRADO'] ?? '' ?> <?= $resultados[0]['PROGRAMADOR_NOMBRE'] ?? '' ?> <?= $resultados[0]['PROGRAMADOR_APELLIDO'] ?? '' ?></td>
                 </tr>
                 <tr>
                     <th colspan="4" class="text-center">TAREAS POR REALIZAR</th>

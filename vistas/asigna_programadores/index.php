@@ -12,6 +12,9 @@ try {
 
     $programador = new Programador($_GET);
     $programadores = $programador->buscar();
+
+
+    
 } catch (PDOException $e) {
     $error = $e->getMessage();
 } catch (Exception $e2) {
@@ -42,7 +45,7 @@ try {
                     <select name="asignacion_id_programador" id="asignacion_id_programador" class="form-control">
                         <option value="">SELECCIONE...</option>
                         <?php foreach ($programadores as $key => $programador) : ?>
-                            <option value="<?= $programador['PROGRAMADOR_ID'] ?>"><?= $programador['PROGRAMADOR_NOMBRE'] ?></option>
+                            <option value="<?= $programador['PROGRAMADOR_ID'] ?>"><?= $programador['PROGRAMADOR_NOMBRE'] .' '. $programador['PROGRAMADOR_APELLIDO'] ?></option>
                         <?php endforeach ?>
                     </select>
                 </div>

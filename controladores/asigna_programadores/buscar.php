@@ -37,6 +37,7 @@ try {
                             <th>NOMBRE DE LA APLICACION</th>
                             <th>GRADO DEL PROGRAMADOR</th>
                             <th>NOMBRE DEL PROGRAMADOR</th>
+                            <th>APELLIDO DEL PROGRAMADOR</th>
                             <th>MODIFICAR</th>
                             <th>ELIMINAR</th>
                         </tr>
@@ -49,6 +50,7 @@ try {
                                     <td><?= $resultado['APLICACION_NOMBRE'] ?></td>
                                     <td><?= $resultado['PROGRAMADOR_GRADO'] ?></td>
                                     <td><?= $resultado['PROGRAMADOR_NOMBRE'] ?></td>
+                                    <td><?= $resultado['PROGRAMADOR_APELLIDO'] ?></td>
                                     <td><a class="btn btn-warning w-100" href="/final_marin/vistas/asigna_programadores/modificar.php?asignacion_id=<?= $resultado['ASIGNACION_ID'] ?>">Modificar</a></td>
                                     <td><a class="btn btn-danger w-100" href="/final_marin/controladores/asigna_programadores/eliminar.php?asignacion_id=<?= $resultado['ASIGNACION_ID'] ?>">Eliminar</a></td>
                                 </tr>
