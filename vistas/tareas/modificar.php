@@ -31,7 +31,7 @@ try {
     <h1 class="text-center fw-bold">Modificar Tareas</h1>
     <div class="row justify-content-center">
         <form action="/final_marin/controladores/tareas/modificar.php" method="POST" class="col-lg-8 border bg-light p-3">
-            <input type="hidden" name="tarea_id" value="<?= $tareas[0]['TAREA_ID'] ?>" >
+            <input type="hidden" name="tarea_id" value="<?= $_GET['tarea_id'] ?>">
             <div class="row mb-3">
                 <div class="col">
                     <label for="tarea">Aplicación</label>
@@ -39,7 +39,7 @@ try {
                         <option value="">SELECCIONE...</option>
                         <?php foreach ($aplicaciones as $key => $aplicacion) : ?>
                             <option value="<?= $aplicacion['APLICACION_ID'] ?>"><?= $aplicacion['APLICACION_NOMBRE'] ?></option>
-                        <?php endforeach?>
+                        <?php endforeach ?>
                     </select>
                 </div>
             </div>

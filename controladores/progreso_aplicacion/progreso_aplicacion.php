@@ -14,7 +14,7 @@ $asignacion_id = $_GET['asignacion_id'] ?? '';
 try {
     $resultados = array();
     $asignacionProgramadores = new AsignacionProgramadores();
-    $resultados = $asignacionProgramadores->buscar($aplicacion_id, $programador_grado, $programador_nombre, $asignacion_id);
+    $resultados = $asignacionProgramadores->buscar($aplicacion_id, $programador_grado, $programador_nombre, $programador_apellido, $asignacion_id);
 } catch (PDOException $e) {
     $error = $e->getMessage();
 } catch (Exception $e2) {
