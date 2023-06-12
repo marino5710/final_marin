@@ -19,6 +19,8 @@ try {
 } catch (Exception $e2) {
     $error = $e2->getMessage();
 }
+
+
 $totalTareas = count($resultados); 
 $tareasFinalizadas = 0; 
 
@@ -29,12 +31,7 @@ foreach ($resultados as $resultado) {
 }
 
 $porcentajeAvance = ($tareasFinalizadas / $totalTareas) * 100;
-$porcentajeAvance = round($porcentajeAvance); // Redondea el porcentaje
-} catch (PDOException $e) {
-$error = $e->getMessage();
-} catch (Exception $e2) {
-$error = $e2->getMessage();
-}
+
 ?>
 
 
