@@ -19,6 +19,22 @@ try {
 } catch (Exception $e2) {
     $error = $e2->getMessage();
 }
+$totalTareas = count($resultados); 
+$tareasFinalizadas = 0; 
+
+foreach ($resultados as $resultado) {
+    if ($resultado['TAREA_ESTADO'] === 'FINALIZADA') {
+        $tareasFinalizadas++;
+    }
+}
+
+$porcentajeAvance = ($tareasFinalizadas / $totalTareas) * 100;
+$porcentajeAvance = round($porcentajeAvance); // Redondea el porcentaje
+} catch (PDOException $e) {
+$error = $e->getMessage();
+} catch (Exception $e2) {
+$error = $e2->getMessage();
+}
 ?>
 
 
@@ -72,7 +88,7 @@ try {
             <tfoot>
                 <tr>
                     <th colspan="2">Porcentaje de avance</th>
-                    <td colspan="2"></td>
+                    <td colspan="2"><?= $porcentajeAvance ?>%</td>
                 </tr>
             </tfoot>
         </table>
