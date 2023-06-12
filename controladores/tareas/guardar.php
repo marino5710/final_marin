@@ -1,7 +1,7 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 require_once '../../modelos/Tarea.php';
 
 if($_POST['tarea_id_aplicacion'] != '' && $_POST['tarea_descripcion'] != '' && $_POST['tarea_estado'] != '' && $_POST['tarea_fecha'] != '') {
