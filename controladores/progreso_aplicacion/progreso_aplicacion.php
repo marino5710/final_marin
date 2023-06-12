@@ -5,21 +5,22 @@ error_reporting(E_ALL);
 require_once '../../modelos/Progreso_Aplicacion.php';
 
 // Obtener los valores de los parámetros si están presentes
-$nombreAplicacion = $_GET['APLICACION_NOMBRE'] ?? '';
-$gradoProgramador = $_GET['PROGRAMADOR_GRADO'] ?? '';
-$nombreProgramador = $_GET['PROGRAMADOR_NOMBRE'] ?? '';
-$asignacionId = $_GET['ASIGNACION_ID'] ?? '';
+$aplicacion_id = $_GET['aplicacion_id'] ?? '';
+$programador_grado = $_GET['programador_grado'] ?? '';
+$programador_nombre = $_GET['programador_nombre'] ?? '';
+$asignacion_id = $_GET['asignacion_id'] ?? '';
 
 try {
     $resultados = array();
     $asignacionProgramadores = new AsignacionProgramadores();
-    $resultados = $asignacionProgramadores->buscar($nombreAplicacion, $gradoProgramador, $nombreProgramador, $asignacionId);
+    $resultados = $asignacionProgramadores->buscar($aplicacion_id, $programador_grado, $programador_nombre, $asignacion_id);
 } catch (PDOException $e) {
     $error = $e->getMessage();
 } catch (Exception $e2) {
     $error = $e2->getMessage();
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="es">

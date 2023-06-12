@@ -16,12 +16,7 @@ class AsignacionProgramadores extends Conexion{
         $this->asignacion_id_programador = $args['asignacion_id_programador'] ?? null;
     }
 
-    public function guardar(){
-        $sql = "INSERT INTO asignacion_programadores (asignacion_id_aplicacion, asignacion_id_programador) VALUES ('$this->asignacion_id_aplicacion', '$this->asignacion_id_programador')";
-        $resultado = self::ejecutar($sql);
-        return $resultado;
-    }
-    public function buscar($nombreAplicacion, $gradoProgramador, $nombreProgramador, $asignacionId)
+    public function buscar($aplicacion_id, $programador_grado, $programador_nombre, $asignacion_id)
     {
         $sql = "SELECT a.aplicacion_nombre, p.programador_grado, p.programador_nombre, ap.asignacion_id,
             t.tarea_descripcion, t.tarea_estado, t.tarea_fecha
@@ -31,24 +26,24 @@ class AsignacionProgramadores extends Conexion{
             JOIN tareas t ON t.tarea_id_aplicacion = a.aplicacion_id
             WHERE 1=1";
     
-        if (!empty($nombreAplicacion)) {
-            $sql .= " AND a.aplicacion_nombre LIKE '%$nombreAplicacion%'";
+        if (!empty($aplicacion_id)) {
+            $sql .= " AND a.aplicacion_id = $aplicacion_id";
         }
     
-        if (!empty($gradoProgramador)) {
-            $sql .= " AND p.programador_grado = '$gradoProgramador'";
+        if (!empty($programador_grado)) {
+            $sql .= " AND p.programador_grado = '$programador_grado'";
         }
     
-        if (!empty($nombreProgramador)) {
-            $sql .= " AND p.programador_nombre LIKE '%$nombreProgramador%'";
+        if (!empty($programador_nombre)) {
+            $sql .= " AND p.programador_nombre LIKE '%$programador_nombre%'";
         }
     
-        if (!empty($asignacionId)) {
-            $sql .= " AND ap.asignacion_id = $asignacionId";
+        if (!empty($asignacion_id)) {
+            $sql .= " AND ap.asignacion_id = $asignacion_id";
         }
     
-        $resultado = self::servir($sql);
+        $resultados = self::servir($sql);
     
-        return $resultado;
+        return $resultados;
     }
  }    
