@@ -67,7 +67,7 @@
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/final_marin/controladores/progreso_aplicacion/progreso_aplicacion.php">Ver el progreso de las aplicaciones</a>
+                            <!-- <a class="nav-link" href="/final_marin/controladores/progreso_aplicacion/progreso_aplicacion.php">Ver el progreso de las aplicaciones</a> -->
                             <a class="nav-link" href="/final_marin/vistas/progreso_aplicacion/progreso_aplicacion.php">Buscar el progreso de las aplicaciones</a>
                         </li>
                     </ul>
