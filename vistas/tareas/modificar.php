@@ -28,7 +28,7 @@ try {
 
 <?php include_once '../../includes/header.php' ?>
 <div class="container">
-    <h1 class="text-center">Modificar Tareas</h1>
+    <h1 class="text-center fw-bold">Modificar Tareas</h1>
     <div class="row justify-content-center">
         <form action="/final_marin/controladores/tareas/modificar.php" method="POST" class="col-lg-8 border bg-light p-3">
             <input type="hidden" name="tarea_id" value="<?= $tareas[0]['TAREA_ID'] ?>" >

@@ -17,7 +17,7 @@ require '../../modelos/Programador.php';
 
 <?php include_once '../../includes/header.php'?>
     <div class="container">
-        <h1 class="text-center">Modificar Programadores</h1>
+        <h1 class="text-center fw-bold">Modificar Programadores</h1>
         <div class="row justify-content-center">
             <form action="/final_marin/controladores/programadores/modificar.php" method="POST" class="col-lg-8 border bg-light p-3">
                 <input type="hidden" name="programador_id"value="<?= $programadores[0]['PROGRAMADOR_ID'] ?>" >

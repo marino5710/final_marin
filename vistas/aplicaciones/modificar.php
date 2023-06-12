@@ -20,7 +20,7 @@ require '../../modelos/aplicacion.php';
 ?>
 <?php include_once '../../includes/header.php'?>
     <div class="container">
-        <h1 class="text-center">Modificar Aplicaciones</h1>
+        <h1 class="text-center fw-bold">Modificar Aplicaciones</h1>
         <div class="row justify-content-center">
             <form action="/final_marin/controladores/aplicaciones/modificar.php" method="POST" class="col-lg-8 border bg-light p-3">
                 <input type="hidden" name="aplicacion_id" value="<?= $aplicaciones[0]['APLICACION_ID'] ?>" >

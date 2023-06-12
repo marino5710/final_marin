@@ -43,7 +43,7 @@ try {
 
 <?php include_once '../../includes/header.php' ?>
 <div class="container">
-    <h1 class="text-center">Modificar Programadores y Aplicaciones</h1>
+    <h1 class="text-center fw-bold">Modificar Programadores y Aplicaciones</h1>
     <div class="row justify-content-center">
         <form action="/final_marin/controladores/asigna_programadores/modificar.php" method="POST" class="col-lg-8 border bg-light p-3">
             <input type="hidden" name="asignacion_id" value="<?= $asignacionprogramadores[0]['ASIGNACION_ID'] ?>" >
