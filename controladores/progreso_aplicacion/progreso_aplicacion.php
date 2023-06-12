@@ -21,8 +21,8 @@ try {
 }
 
 
-$totalTareas = count($resultados); 
-$tareasFinalizadas = 0; 
+$totalTareas = count($resultados);
+$tareasFinalizadas = 0;
 
 foreach ($resultados as $resultado) {
     if ($resultado['TAREA_ESTADO'] === 'FINALIZADA') {
@@ -30,7 +30,11 @@ foreach ($resultados as $resultado) {
     }
 }
 
-$porcentajeAvance = ($tareasFinalizadas / $totalTareas) * 100;
+if ($totalTareas > 0) {
+    $porcentajeAvance = ($tareasFinalizadas / $totalTareas) * 100;
+} else {
+    $porcentajeAvance = 0; 
+}
 
 ?>
 
@@ -46,6 +50,7 @@ $porcentajeAvance = ($tareasFinalizadas / $totalTareas) * 100;
 </head>
 <body>
     <div class="container">
+        <h1 class="text-center">BUSCAR PROGRESO DE LA APLICACION</h1>
         <table class="table table-bordered border-dark">
             <thead>
                 <tr>

@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-require '../../modelos/programador.php';
+require '../../modelos/Programador.php';
     try {
         $programador = new Programador($_GET);
 
@@ -19,8 +19,8 @@ require '../../modelos/programador.php';
     <div class="container">
         <h1 class="text-center">Modificar Programadores</h1>
         <div class="row justify-content-center">
-            <form action="/final_marin/controladores/programadores/guardar.php" method="POST" class="col-lg-8 border bg-light p-3">
-                <input type="hidden" name="programador_id">
+            <form action="/final_marin/controladores/programadores/modificar.php" method="POST" class="col-lg-8 border bg-light p-3">
+                <input type="hidden" name="programador_id"value="<?= $programadores[0]['PROGRAMADOR_ID'] ?>" >
                 <div class="row mb-3">
                     <div class="col">
                         <label for="programador_grado">Grado del Programador</label>

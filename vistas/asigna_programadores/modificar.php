@@ -4,6 +4,8 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 require '../../modelos/Programador.php';
 require '../../modelos/Aplicacion.php';
+require '../../modelos/asigna_programadores.php';
+
 
 
 try {
@@ -14,6 +16,20 @@ try {
 } catch (Exception $e2) {
     $error = $e2->getMessage();
 }
+
+try {
+    $asignacionprogramador = new AsignacionProgramadores($_GET);
+    $asignacionprogramadores = $asignacionprogramador->buscar();
+} catch (PDOException $e) {
+    $error = $e->getMessage();
+} catch (Exception $e2) {
+    $error = $e2->getMessage();
+
+    
+}
+//  var_dump($asignacionprogramadores);
+//  exit;
+
 
 try {
     $aplicacion = new Aplicacion($_GET);
@@ -29,8 +45,8 @@ try {
 <div class="container">
     <h1 class="text-center">Modificar Programadores y Aplicaciones</h1>
     <div class="row justify-content-center">
-        <form action="/final_marin/controladores/asigna_programadores/guardar.php" method="POST" class="col-lg-8 border bg-light p-3">
-            <input type="hidden" name="asignacion_id">
+        <form action="/final_marin/controladores/asigna_programadores/modificar.php" method="POST" class="col-lg-8 border bg-light p-3">
+            <input type="text" name="asignacion_id" value="<?= $asignacionprogramadores[0]['ASIGNACION_ID'] ?>" >>
             <div class="row mb-3">
                 <div class="col">
                     <label for="asignacion_id_aplicacion">Aplicación</label>

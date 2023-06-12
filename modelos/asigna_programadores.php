@@ -61,6 +61,9 @@ class AsignacionProgramadores extends Conexion{
     public function modificar(){
         $sql = "UPDATE asignacion_programadores SET asignacion_id_aplicacion = '$this->asignacion_id_aplicacion', asignacion_id_programador = '$this->asignacion_id_programador' WHERE asignacion_id = $this->asignacion_id";
         
+
+        // echo $sql;
+        // exit;
         $resultado = self::ejecutar($sql);
         return $resultado;
     }

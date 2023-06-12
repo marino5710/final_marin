@@ -30,8 +30,8 @@ try {
 <div class="container">
     <h1 class="text-center">Modificar Tareas</h1>
     <div class="row justify-content-center">
-        <form action="/final_marin/controladores/tareas/guardar.php" method="POST" class="col-lg-8 border bg-light p-3">
-            <input type="hidden" name="tarea_id">
+        <form action="/final_marin/controladores/tareas/modificar.php" method="POST" class="col-lg-8 border bg-light p-3">
+            <input type="hidden" name="tarea_id" value="<?= $tareas[0]['TAREA_ID'] ?>" >>
             <div class="row mb-3">
                 <div class="col">
                     <label for="tarea">Aplicación</label>
