@@ -46,7 +46,7 @@ try {
     <h1 class="text-center">Modificar Programadores y Aplicaciones</h1>
     <div class="row justify-content-center">
         <form action="/final_marin/controladores/asigna_programadores/modificar.php" method="POST" class="col-lg-8 border bg-light p-3">
-            <input type="text" name="asignacion_id" value="<?= $asignacionprogramadores[0]['ASIGNACION_ID'] ?>" >>
+            <input type="hidden" name="asignacion_id" value="<?= $asignacionprogramadores[0]['ASIGNACION_ID'] ?>" >
             <div class="row mb-3">
                 <div class="col">
                     <label for="asignacion_id_aplicacion">Aplicación</label>
